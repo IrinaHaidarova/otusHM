@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 func main() {
-    // оператор := одновременно объявляет и инициализирует переменную
-    pages := "Hello world!"
-    
-    fmt.Println(pages)
+	fmt.Println(`I like Go!
+I like Go!
+I like Go!`)
 }
