@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dp01
+  labels:
+    app: otushm
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pod01
+  template:
+    metadata:
+      labels:
+        app: pod01
+    spec:
+      containers:
+      - name: container01
+        image: ihaydarova/otushm:0.0.1
+        ports:
+        - containerPort: 8000
