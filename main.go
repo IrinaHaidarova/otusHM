@@ -22,7 +22,7 @@ func handler2(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/health/", handler)
-	http.HandleFunc("/2", handler2)
+	http.HandleFunc("/", handler2)
 	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
 		fmt.Println("Ошибка запуска сервера:", err)
