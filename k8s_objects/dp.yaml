@@ -19,15 +19,15 @@ spec:
         image: ihaydarova/otushm:0.0.1
         ports:
         - containerPort: 8000
-livenessProbe:
-  httpGet:
-  path: /health
-  port: 8000
-  initialDelaySeconds: 10
-  periodSeconds: 5
-readinessProbe:
-  httpGet:
-  path: /health
-  port: 8000
-  initialDelaySeconds: 5
-  periodSeconds: 3
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 3
